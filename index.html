@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas Riviera Maya</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header class="encabezado">
+        <div class="header-contenido">
+            <span class="badge-header">DESCUBRE • EXPLORA • DISFRUTA</span>
+            <h1>Reservas Riviera Maya</h1>
+            <p>Encuentra tu próxima experiencia y prepara tu reservación.</p>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <!-- Panel de Controles -->
+        <section class="panel-catalogo">
+            <div class="panel-info">
+                <h2>Experiencias para descubrir</h2>
+                <p class="sub-info">Busca una actividad, elige cuántas personas asistirán y agrégala a tu reservación.</p>
+            </div>
+            <div class="contador-badge">
+                <span id="contador-num">0</span>
+                <span class="contador-label">experiencias</span>
+            </div>
+        </section>
+
+        <section class="controles" aria-label="Controles del catálogo">
+            <div class="grupo-control">
+                <label for="buscador">Buscar por nombre</label>
+                <input id="buscador" type="search" placeholder="Ej. kayak, cenote...">
+            </div>
+            <div class="grupo-control">
+                <label for="filtroCategoria">Categoría</label>
+                <select id="filtroCategoria">
+                    <option value="todas">Todas las categorías</option>
+                    <option value="naturaleza">Naturaleza</option>
+                    <option value="cultura">Cultura</option>
+                    <option value="aventura">Aventura</option>
+                    <option value="gastronomia">Gastronomía</option>
+                </select>
+            </div>
+            <div class="grupo-control">
+                <label for="filtroPrecio">Precio máximo</label>
+                <select id="filtroPrecio">
+                    <option value="todos">Cualquier precio</option>
+                    <option value="400">Hasta $400 MXN</option>
+                    <option value="600">Hasta $600 MXN</option>
+                    <option value="800">Hasta $800 MXN</option>
+                </select>
+            </div>
+            <div class="grupo-control">
+                <label for="ordenPrecio">Ordenar por precio</label>
+                <select id="ordenPrecio">
+                    <option value="normal">Orden original</option>
+                    <option value="ascendente">Menor a mayor</option>
+                    <option value="descendente">Mayor a menor</option>
+                </select>
+            </div>
+        </section>
+
+        <p id="estado" class="estado">Cargando experiencias...</p>
+
+        <!-- Catálogo de Experiencias -->
+        <section id="catalogo" class="catalogo"></section>
+
+        <!-- Sección de Resumen y Reservaciones -->
+        <section class="resumen">
+            <div class="resumen-titulo">
+                <h2>Mi reservación</h2>
+                <p>Gestiona los lugares seleccionados para tu viaje</p>
+            </div>
+            <div id="listaReservas">
+                <p class="vacio-msg">No hay experiencias seleccionadas.</p>
+            </div>
+            <div class="total-contenedor">
+                <span>Total estimado:</span>
+                <span id="total">$0 MXN</span>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Proyecto académico de desarrollo front-end • Universidad Tecnológica de Cancún</p>
+    </footer>
+</body>
+</html>
